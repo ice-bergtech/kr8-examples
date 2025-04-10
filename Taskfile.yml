@@ -1,0 +1,26 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: build
+
+  setup:
+    desc: Install required tools
+    cmds:
+      - echo "todo"
+      # install kr8 from homebrew tap
+
+  build:
+    desc: Generate cluster configurations with kr8
+    aliases:
+      - b
+    cmds:
+      - kr8 generate
+
+  build-debug:
+    desc: Generate cluster configurations with kr8
+    aliases:
+      - bd
+    cmds:
+      - kr8 generate --debug
