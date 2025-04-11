@@ -1,20 +1,37 @@
 version: '3'
 
 vars:
-  CHART_VER:  v1.14.0
   CHART_NAME: external-dns
   CHART_REPO: 'https://kubernetes-sigs.github.io/external-dns/'
 
 tasks:
   default:
     cmds:
-      - task: fetch
+      - task: fetch-1.15
 
-  fetch:
+  fetch-1.15:
     desc: "fetch component dependencies"
+    vars:
+      CHART_VER: v1.15.0
     cmds:
-      - mkdir -p ./vendor/{{.CHART_NAME}}-{{.CHART_VER}} && rm -rf ./vendor/{{.CHART_NAME}}-{{.CHART_VER}}/*
-      - mkdir -p ./tmp && rm -rf ./tmp/*
+      - task: fetch-chart
+        vars: { VER: '{{.CHART_VER}}'}
+
+  fetch-1.14:
+    desc: "fetch component dependencies"
+    vars:
+      CHART_VER: v1.14.0
+    cmds:
+      - task: fetch-chart
+        vars: { VER: '{{.CHART_VER}}'}
+
+  fetch-chart:
+    desc: "fetch a helm chart"
+    vars:
+      VER: '{{default "unset" .VER}}'
+    cmds:
+      - mkdir -p ./vendor/{{.CHART_NAME}}-{{.VER}} && rm -rf ./vendor/{{.CHART_NAME}}-{{.VER}}/*
+      - mkdir -p ./vendor/tmp && rm -rf ./vendor/tmp/*
       # add the helm repo and fetch it locally into vendor directory
-      - helm fetch --repo {{.CHART_REPO}} --untar --untardir ./tmp --version "{{.CHART_VER}}" "{{.CHART_NAME}}"
-      - mv ./tmp/{{.CHART_NAME}}/* ./vendor/{{.CHART_NAME}}-{{.CHART_VER}}/ && rm -rf ./tmp
+      - helm fetch --repo {{.CHART_REPO}} --untar --untardir ./vendor/tmp --version "{{.VER}}" "{{.CHART_NAME}}"
+      - mv ./vendor/tmp/{{.CHART_NAME}}/* ./vendor/{{.CHART_NAME}}-{{.VER}}/ && rm -rf ./vendor/tmp
