@@ -10,19 +10,19 @@ tasks:
     desc: Install required tools
     cmds:
       - echo "todo"
-      # install kr8p from homebrew tap
-      - brew install ice-bergtech/tap/kr8p
+      # install kr8 from homebrew tap
+      - brew install ice-bergtech/tap/kr8
 
   build:
     desc: Generate cluster configurations with kr8
     aliases:
       - b
     cmds:
-      - kr8p generate
+      - kr8 generate
 
   build-debug:
     desc: Generate cluster configurations with kr8
     aliases:
       - bd
     cmds:
-      - kr8p generate --debug
+      - kr8 generate --debug

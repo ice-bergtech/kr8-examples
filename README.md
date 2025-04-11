@@ -1,4 +1,4 @@
-# kr8p-examples
+# kr8-examples
 
 Examples and references for using the **kr8+** tool.
 
@@ -6,6 +6,6 @@ Examples and references for using the **kr8+** tool.
 
 * Install `go-task`: https://taskfile.dev/installation/
 * Install **kr8+**: 
-  * [Github Releases](https://github.com/ice-bergtech/kr8p/releases)
+  * [Github Releases](https://github.com/ice-bergtech/kr8/releases)
   * [Homebrew Tap](https://github.com/ice-bergtech/homebrew-tap)
-* run `kr8p generate`
+* run `kr8 generate`
