@@ -8,5 +8,6 @@
     nativeFuncs: { path: "components/doc-concepts/nativeFunc" },
     echo_test: { path: "components/doc-concepts/echo-test-kube" },
     echo_test_compose: { path: "components/doc-concepts/echo-test-compose" },
+    template_examples: { path: "components/doc-concepts/go-tpl" },
   },
 }
