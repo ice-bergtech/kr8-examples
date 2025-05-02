@@ -1,11 +1,5 @@
 local config = std.extVar('kr8');
-
-local kompose_template = std.native('komposeFile')('compose.yml', 'compose', {
-    kr8_spec: config.kr8_spec,
-    namespace: config.namespace,
-    release_name: config.release_name,
-    called_from: std.thisFile
-});
+local kompose_template = std.native('komposeFile')(std.thisFile, ['compose.yml'], config.namespace);
 
 [
     object

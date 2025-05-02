@@ -8,7 +8,7 @@
   ------------------------
   helmTemplate: ['name', 'chart', 'opts']
   template: ['config', 'templateStr']
-  komposeFile: ['inFile', 'outPath', 'opts']
+  komposeFile: ['rootDir', 'listFiles', 'namespace']
   regexEscapeString: ['str']
   regexMatch: ['regex', 'string']
   regexSubst: ['regex', 'src', 'repl']
