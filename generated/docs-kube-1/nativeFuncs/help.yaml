@@ -1,31 +1,68 @@
 |
   help: Print out kr8 native funcion names and parameters.
   Functions are called in the format:
-  `std.native('<function>')(<param1>, <param2>)`
+  `std.native('<function>')(<param1>, <param2>, ...)`
 
   Available functions:
 
   ------------------------
-  helmTemplate: ['name', 'chart', 'opts']
-  template: ['config', 'templateStr']
-  komposeFile: ['inFile', 'outPath', 'opts']
-  regexEscapeString: ['str']
-  regexMatch: ['regex', 'string']
-  regexSubst: ['regex', 'src', 'repl']
-  url: ['rawURL']
-  netIPInfo: ['rawIP']
-  netIPCompare: ['rawIP', 'otherIP']
-  netIPDelta: ['rawIP', 'otherIP']
-  netIPDelta: ['listIPs']
-  netIPInc: ['rawIP']
-  netIPIncBy: ['rawIP', 'count']
-  netIPDec: ['rawIP']
-  netIPDecBy: ['rawIP', 'count']
-  netIPARPA: ['rawIP']
-  netIPHex: ['rawIP']
-  netIPBinary: ['rawIP']
-  netIPNetsBetween: ['ipNet', 'otherIPNet']
-  netIPCalcSubnetsV4: ['ip4Net', 'maskLen']
-  netIPCalcSubnetsV6: ['ip6Net', 'netMaskLen', 'hostMaskLen']
+  helmTemplate: [
+    'name'
+    'chart'
+    'opts']
+  template: [
+    'config: string, a json configuration object for the template to reference'
+    'templateStr: the template string']
+  komposeFile: [
+    'rootDir: usually `std.thisFile`.  Filename is removed to determine directory.'
+    'listFiles: list of compose files to process'
+    'namespace: namespace to assign to resources']
+  regexEscapeString: [
+    'str: string to escape']
+  regexMatch: [
+    'regex: string'
+    'string: applied to regex']
+  regexSubst: [
+    'regex: string, replaces strings that match'
+    'src: source string'
+    'repl: replacement string']
+  url: [
+    'rawURL: a URL string']
+  netIPInfo: [
+    'rawIP']
+  netIPCompare: [
+    'rawIP'
+    'otherIP']
+  netIPDelta: [
+    'rawIP'
+    'otherIP']
+  netIPDelta: [
+    'listIPs']
+  netIPInc: [
+    'rawIP']
+  netIPIncBy: [
+    'rawIP'
+    'count']
+  netIPDec: [
+    'rawIP']
+  netIPDecBy: [
+    'rawIP'
+    'count']
+  netIPARPA: [
+    'rawIP']
+  netIPHex: [
+    'rawIP']
+  netIPBinary: [
+    'rawIP']
+  netIPNetsBetween: [
+    'ipNet'
+    'otherIPNet']
+  netIPCalcSubnetsV4: [
+    'ip4Net'
+    'maskLen']
+  netIPCalcSubnetsV6: [
+    'ip6Net'
+    'netMaskLen'
+    'hostMaskLen']
 
 ---
