@@ -1,7 +1,7 @@
-local config = std.extVar('kr8');
-local kompose_template = std.native('komposeFile')(std.thisFile, ['compose.yml'], config.namespace);
+local config = std.extVar("kr8");
+local kompose_template = std.native("komposeFile")(std.thisFile, ["compose.yml"], config.namespace);
 
 [
-    object
-    for object in kompose_template
+  object
+  for object in kompose_template
 ]

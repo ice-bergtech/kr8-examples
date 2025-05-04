@@ -1,7 +1,7 @@
 {
   _kr8_spec: {
     //postprocessor: importstr 'post-process.jsonnet',
-    generate_dir: 'generated',
+    generate_dir: "generated",
     generate_short_names: true,
     prune_params: true,
   },

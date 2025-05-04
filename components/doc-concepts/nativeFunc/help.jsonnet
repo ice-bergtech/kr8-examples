@@ -1,4 +1,4 @@
-local helpText = std.native('help')();
+local helpText = std.native("help")();
 [
-helpText
+  helpText,
 ]

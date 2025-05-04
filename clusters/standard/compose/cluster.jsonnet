@@ -1,6 +1,6 @@
 {
   _cluster+: {
-    name: 'standard-compose',
+    name: "standard-compose",
   },
   _components+: {},
 }

@@ -1,7 +1,7 @@
 {
-  namespace: 'kube-system',
-  release_name: 'storageclasses',
+  namespace: "kube-system",
+  release_name: "storageclasses",
   kr8_spec: {
-    includes: [ "storageClasses.jsonnet" ],
+    includes: ["storageClasses.jsonnet"],
   },
 }

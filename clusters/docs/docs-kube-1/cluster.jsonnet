@@ -1,6 +1,6 @@
 {
   _cluster+: {
-    name: 'docs-kube-1',
+    name: "docs-kube-1",
     cluster_type: "aws",
   },
   _components+: {

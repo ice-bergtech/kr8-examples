@@ -1,6 +1,6 @@
 {
   _cluster+: {
-    name: 'standard-kube',
+    name: "standard-kube",
   },
   _components+: {
     echo_test: { path: "components/doc-concepts/echo-test-kube" },

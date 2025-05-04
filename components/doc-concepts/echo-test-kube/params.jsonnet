@@ -1,11 +1,11 @@
 {
   local comp = self,
-  namespace: 'kube-system',
-  release_name: 'echo-test',
+  namespace: "kube-system",
+  release_name: "echo-test",
   kr8_spec: {
-    includes: [ "echo.jsonnet" ],
+    includes: ["echo.jsonnet"],
     extfiles: {
-      echoFile: "./vendor/" + comp.version + "/echo.yml"
+      echoFile: "./vendor/" + comp.version + "/echo.yml",
     },
   },
   version: "v1.0.0",

@@ -1,6 +1,6 @@
 {
   _cluster+: {
-    name: 'standard',
+    name: "standard",
   },
   _components+: {
     external_dns: { path: "components/chart/external-dns" },
