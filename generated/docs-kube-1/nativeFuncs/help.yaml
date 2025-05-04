@@ -1,5 +1,6 @@
 |
-  help: Print out kr8 native funcion names and parameters.
+  help: kr8+ Native Functions
+
   Functions are called in the format:
   `std.native('<function>')(<param1>, <param2>, ...)`
 
